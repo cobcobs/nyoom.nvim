@@ -84,5 +84,5 @@
 (nyoom-module-p! nyoom
  (do
    (set! guifont "Liga SFMono Nerd Font:h15")
-   (set! background :dark)
+   (set! background :light)
    (set! termguicolors)))

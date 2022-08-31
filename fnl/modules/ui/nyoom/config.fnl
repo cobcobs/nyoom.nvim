@@ -22,9 +22,9 @@
         : rotate-hex} (require :modules.ui.nyoom.colorutils))
 
 ;; define a bg and fg and accent
-(local base00 :#161616)
-(local base06 :#ffffff)
-(local base09 :#78a9ff)
+(local base00 :#FFFFFF)
+(local base06 :#525252)
+(local base09 :#EE5396)
 
 ;; generate a gradient of bg/fg colors based off of that
 (local base01 (blend-hex base00 base06 0.085))
@@ -52,15 +52,15 @@
                :base05 base05 ;; A brighter shade color of base04
                :base06 base06 ;; The brightest shade color based on base04
                :base07 "#08bdba" ;; A calm and highly contrasted color reminiscent of glowing ice
-               :base08 "#3ddbd9" ;; The bright and shiny primary accent color reminiscent of pure and clear energy
+               :base08 "#ff7eb6" ;; The bright and shiny primary accent color reminiscent of pure and clear energy
                :base09 base09 ;; And the sky was never quite the same shade of blue again
-               :base10 "#ee5396" ;; A dark and intensive color reminiscent of the withering flowers come fall
-               :base11 "#33b1ff" ;; But never have I been a blue calm sea. I have always been a storm
-               :base12 "#ff7eb6" ;; A more darkened and less saturated color reminiscent of cherry blossoms
+               :base10 "#ff6f00" ;; A dark and intensive color reminiscent of the withering flowers come fall
+               :base11 "#0f62fe" ;; But never have I been a blue calm sea. I have always been a storm
+               :base12 "#673AB7" ;; A more darkened and less saturated color reminiscent of cherry blossoms
                :base13 "#42be65" ;; Nature in her green, tranquil woods heals and soothes all afflictions
                :base14 "#be95ff" ;; I want to watch wisteria grow right over my bare feet
-               :base15 "#82cfff" ;; A book must be an ice axe to break the seas frozen inside our soul
-               :blend  "#131313" ;; Blend of #000000 & base00 for darker accents 
+               :base15 "#FFAB91" ;; A book must be an ice axe to break the seas frozen inside our soul
+               :blend  "#FAFAFA" ;; Blend of #000000 & base00 for darker accents 
                :none :NONE})
 
 ;; (local carbon {:base00 base00 ;; The origin color or the Carbon palette
@@ -363,7 +363,8 @@
   (do
     (custom-set-face! GitSignsAdd [] {:fg carbon.base08 :bg carbon.none})
     (custom-set-face! GitSignsChange [] {:fg carbon.base09 :bg carbon.none})
-    (custom-set-face! GitSignsDelete [] {:fg carbon.base14 :bg carbon.none})))
+    (custom-set-face! GitSignsDelete [] {:fg carbon.base14 :bg carbon.none})
+    (custom-set-face! DiffChange [] {:fg carbon.base09 :bg carbon.none})))
 
 ;; hydra
 (nyoom-module-p! hydra
